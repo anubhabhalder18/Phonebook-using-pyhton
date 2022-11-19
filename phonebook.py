@@ -9,7 +9,7 @@ class phonebook:
     self.name=name
     self.phone=phone
     self.address=address
-  #A method that would add the datas of class in a row of table(ie. x)
+  #A method that would add the data of class in a row of table(ie. x)
   def myfunc(p):
     global i
     global row
