@@ -77,6 +77,7 @@ while(flag==True):
   
   for xe in range(max):
     p[num].myfunc()
+    num+=1
   print(tabulate(row))
   res=input("Do u want to customize any data?")
   if(res=="y"):
