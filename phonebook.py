@@ -11,7 +11,7 @@ class phonebook:
     self.address=address
   #A method that would add the datas of class in a row of table(ie. x)
   def myfunc(p):
-    i=1
+    global i
     global row
     x=[]
     x.append(i)
@@ -71,20 +71,20 @@ while(ser<100):
 #PUTTING A FLAG WHICH TELLS SYSTEM WHEN TO MAKE TABLES AND WHEN TO STOP
 flag=True
 while(flag==True):
-  row=[["Serial no.","NAME","PHONE NO","ADDRESS"]]#RENEWING THE  2D TABLE WITH ONLY FIRST ROW
-  print("\tPHONEBOOK\n\n")#TABLE HEADING 
-  num=0
+    i=1
+    row=[["Serial no.","NAME","PHONE NO","ADDRESS"]]#RENEWING THE  2D TABLE WITH ONLY FIRST ROW
+    print("\tPHONEBOOK\n\n")#TABLE HEADING 
+    num=0
   
-  for xe in range(max):
-    p[num].myfunc()
-    num+=1
-  print(tabulate(row))
-  res=input("Do u want to customize any data?")
-  if(res=="y"):
-    a=int(input("Which serial number contact do u want to change?(to add new number type 0)\t"))
-    b=int(input("Press 1 to change name 2 to change phone number 3 to change address\t"))
-    custom(a,b)
-  if(res=="n"):
-    flag=False
+    for xe in range(max):
+        p[num].myfunc()
+        num+=1
+    print(tabulate(row))
+    res=input("Do u want to customize any data?")
+    if(res=="y"):
+        a=int(input("Which serial number contact do u want to change?(to add new number type 0)\t"))
+        b=int(input("Press 1 to change name 2 to change phone number 3 to change address\t"))
+        custom(a,b)
+    if(res=="n"):
+        flag=False
   
-
